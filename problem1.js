@@ -5,21 +5,18 @@
 // Результат вывести в консоль
 const letter='Привет! Как дела?';
 
-
 function getVowels(letter){
     //В массиве vowels будут хранится все гласные буквы
     const vowels=['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
-    //В lowRegistrLetter будет хранится значение переменной letter в нижнем регистре
-    const lowRegistrLetter=letter.toLowerCase();
-    //Переменная onlyVowelsLetter будет строкой состоящей из гласных, которые взяты из переменной lowRegistrLetter
+    //Переменная onlyVowelsLetter будет строкой состоящей из гласных, которые взяты из переменной Letter
     let onlyVowelsLetter='';
-    //1й цикл for будет перебирать каждый символ из строки lowRegistrLetter 
-    for(let i=0; i<lowRegistrLetter.length; i++){
+    //1й цикл for будет перебирать каждый символ из строки Letter 
+    for(let i=0; i<letter.length; i++){
     //2й цикл for будет перебирать каждый символ из массива vowels и будет 
-    // сравнивать его с каждым текущим символом из строки lowRegistrLetter
+    // сравнивать его с каждым текущим символом из строки Letter
         for(let j=0; j<vowels.length; j++){
-            if(lowRegistrLetter[i]==vowels[j]){ 
-                onlyVowelsLetter=onlyVowelsLetter+vowels[j];
+            if(letter[i].toLowerCase()==vowels[j]){ 
+                onlyVowelsLetter=onlyVowelsLetter+letter[i];
             }
         }
     }
